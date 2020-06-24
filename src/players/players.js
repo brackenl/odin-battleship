@@ -15,8 +15,6 @@ export const player = () => {
 export const CPU = () => {
   const CPUObj = {
     fireMissile(gameBoard) {
-      // get random co-ords
-      // check that target has not already been attacked, if so generate new random co-ords
       gameBoard.receiveAttack(...getRandomCoOrds(gameBoard));
       setTurn();
     },
@@ -32,6 +30,5 @@ export const CPU = () => {
       notAttackedGrids[randomInd].yCoOrd,
     ];
   };
-
   return CPUObj;
 };
